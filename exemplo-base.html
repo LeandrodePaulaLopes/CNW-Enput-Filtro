@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filtro de Caixas com Controles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px 5px 20px 0;
+    }
+    .botoes {
+      margin-bottom: 10px;
+    }
+    .caixa {
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border-left: 4px solid #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <h1>Filtro de Caixas</h1>
+  
+  <input type="text" id="filtro" placeholder="Digite para filtrar...">
+
+  <div class="botoes">
+    <button onclick="ordenarPorRelevancia()">🔝 Relevância</button>
+    <button onclick="ordenarAZ()">🔤 A-Z</button>
+    <button onclick="ordenarZA()">🔡 Z-A</button>
+  </div>
+
+  <div id="container-caixas"></div>
+
+  <script>
+    let caixas = [];
+    let caixasFiltradas = [];
+
+    // Carrega dados do JSON
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        caixas = data;
+        caixasFiltradas = [...caixas];
+        exibirCaixas(caixasFiltradas);
+      });
+
+    // Exibe os itens na tela
+    function exibirCaixas(lista) {
+      const container = document.getElementById('container-caixas');
+      container.innerHTML = '';
+      lista.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'caixa';
+        div.textContent = `${item.nome} (Relevância: ${item.relevancia})`;
+        container.appendChild(div);
+      });
+    }
+
+    // Filtro ao digitar
+    document.getElementById('filtro').addEventListener('input', function () {
+      const texto = this.value.toLowerCase();
+      caixasFiltradas = caixas.filter(caixa => caixa.nome.toLowerCase().includes(texto));
+      exibirCaixas(caixasFiltradas);
+    });
+
+    // Ordenações
+    function ordenarPorRelevancia() {
+      caixasFiltradas.sort((a, b) => b.relevancia - a.relevancia);
+      exibirCaixas(caixasFiltradas);
+    }
+
+    function ordenarAZ() {
+      caixasFiltradas.sort((a, b) => a.nome.localeCompare(b.nome));
+      exibirCaixas(caixasFiltradas);
+    }
+
+    function ordenarZA() {
+      caixasFiltradas.sort((a, b) => b.nome.localeCompare(a.nome));
+      exibirCaixas(caixasFiltradas);
+    }
+  </script>
+</body>
+</html>

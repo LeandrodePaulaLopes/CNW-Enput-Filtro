@@ -1,0 +1,7 @@
+[
+  { "nome": "Caixa de Ferramentas", "relevancia": 3 },
+  { "nome": "Caixa de Brinquedos", "relevancia": 5 },
+  { "nome": "Caixa de Correio", "relevancia": 2 },
+  { "nome": "Caixa Preta", "relevancia": 4 },
+  { "nome": "Caixa de Papelão", "relevancia": 1 }
+]
