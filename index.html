@@ -7,21 +7,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/global/global.css">
     <link rel="stylesheet" href="./assets/css/pages/index/index.css">
+    <style>
+        .div-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .div-flex__header {
+            width: 50vw;
+            height: 100px;
+            background-color: sandybrown;
+    
+        }
+
+        .div-flex__section-topo {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        
+        .div-flex__item-html {
+            width: 200px;
+            height: 100px;
+            background-color: chocolate;
+        }
+        .div-flex__item-css {
+            width: 200px;
+            height: 100px;
+            background-color: chocolate;
+        }
+        .div-flex__item-js {
+            width: 200px;
+            height: 100px;
+            background-color: chocolate;
+        }
+    </style>
 </head>
 <body>
     <div class="div-flex">
-        <header></header>
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
+        <header class="div-flex__header"></header>
+        <section class="div-flex__section-topo">
+            <div class="div-flex__item-html"></div>
+            <div class="div-flex__item-css"></div>
+            <div class="div-flex__item-js"></div>   
         </section>
-        <input type="text">
+        <!--<input type="text">
         <button type="button"></button>
         <button type="button"></button>
         <button type="button"></button>
         <section>
-            <!--Adicionando as caixas-->
+            Adicionando as caixas
         </section>
         <button type="button"></button>
         <section>
@@ -29,7 +65,7 @@
             <p></p>
             <iframe src="" frameborder="0"></iframe>
             <iframe src="" frameborder="0"></iframe>
-        </section>
+        </section>-->
     </div>
 </body>
 </html>
