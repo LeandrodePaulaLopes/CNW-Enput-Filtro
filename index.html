@@ -12,109 +12,243 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-<<<<<<< HEAD
             gap: 20px;
-=======
->>>>>>> cdc9908d9fac41d30dc4016f7dc36ce1cb7642aa
-
+            padding: 10px;
         }
+
         .div-flex__header {
-            width: 50vw;
+            width: 100%;
+            max-width: 500px;
             height: 100px;
-            background-color: sandybrown;
-    
+            background-color: #FEC748;
+            background-image: url(./assets/img/blobal/Novo\ Projeto\ \(7\).png);
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .div-flex__section-topo {
             display: flex;
             flex-direction: row;
             gap: 10px;
-<<<<<<< HEAD
-           
-=======
->>>>>>> cdc9908d9fac41d30dc4016f7dc36ce1cb7642aa
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        
-        .div-flex__item-html {
-            width: 200px;
-            height: 100px;
-            background-color: chocolate;
+
+        /* círculo genérico */
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            margin: auto;
+            margin-top: 10px;
         }
-        .div-flex__item-css {
-            width: 200px;
-            height: 100px;
-            background-color: chocolate;
+
+        .circle img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
         }
+
+        /* caixas HTML/CSS/JS */
+        .div-flex__item-html,
+        .div-flex__item-css,
         .div-flex__item-js {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 200px;
             height: 100px;
-            background-color: chocolate;
+            flex: 1;
+            min-width: 150px;
+            border-radius: 8px;
         }
-<<<<<<< HEAD
+
+        .div-flex__item-html {
+            background-color: #FC490B;
+        }
+
+        .div-flex__item-css {
+            background-color: #2196F3;
+        }
+
+        .div-flex__item-js {
+            background-color: #FFDF00;
+        }
+
         .div-flex__input {
             height: 50px;
-            width: 60%;
+            width: 100%;
+            max-width: 400px;
             border-radius: 20px;
-            background-size: 20px 20px;
+            padding: 0 15px;
+            box-sizing: border-box;
         }
 
         .div-flex__section-filter {
             display: flex;
             justify-content: space-between;
-            width: 400px;
-            height: 50px;
-            background-color: chocolate;
+            width: 100%;
+            max-width: 400px;
+            gap: 10px;
         }
-        
+
         .item-filter {
-            width: 100px;
-            height: 50px;
+            flex: 1;
+            height: 35px;
+            border-radius: 5px;
         }
 
         .div-flex__section-box {
             display: grid;
-            align-items: center;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 10px;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             min-height: 500px;
-            background-color: chocolate;
         }
 
         .section-box__item {
             width: 100%;
             height: 100px;
-            background-color: rgb(0, 0, 0);
+            background-color: black;
+            border-radius: 8px;
         }
 
         .div-flex__section-comeco {
             display: flex;
-            justify-content: space-evenly;
             flex-direction: column;
             align-items: center;
-            width: 600px;
-            height: 500px;
-            background-color: chocolate;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #00FFF2;
+            border-radius: 10px;
+            box-sizing: border-box;
         }
-=======
->>>>>>> cdc9908d9fac41d30dc4016f7dc36ce1cb7642aa
+
+        .div-flex__section-comeco p {
+            text-align: justify;
+        }
+
+        /* SEÇÕES PRINCIPAIS */
+        .div-flex__section-main {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        /* cores diferentes */
+        .section-html,
+        .html {
+            background-color: #FC490B;
+        }
+
+        .section-css {
+            background-color: #2196F3;
+        }
+
+        .section-js {
+            background-color: #FFDF00;
+        }
+
+        .div-flex__section__title {
+            width: 100%;
+            max-width: 300px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .div-flex__section__code {
+            width: 100%;
+            height: 250px;
+            background-color: aqua;
+            border-radius: 8px;
+        }
+
+        .div-flex__section__explicacao {
+            width: 100%;
+            min-height: 120px;
+            background-color: rgb(147, 243, 243);
+            border-radius: 8px;
+        }
+
+        .html {
+            background-color: #FC490B;
+        }
+
+        .css {
+            background-color: #2196F3;
+        }
+
+        .js {
+            background-color: #FFDF00;
+        }
+
+
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .div-flex__header {
+                height: 80px;
+            }
+
+            .div-flex__section-box {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .div-flex__section-box {
+                grid-template-columns: 1fr;
+            }
+
+            .div-flex__section__code {
+                height: 200px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="div-flex">
         <header class="div-flex__header"></header>
+
         <section class="div-flex__section-topo">
-            <div class="div-flex__item-html"></div>
-            <div class="div-flex__item-css"></div>
-            <div class="div-flex__item-js"></div>   
+            <div id="logo-html" class="div-flex__item-html">
+                <div class="circle">
+                    <img src="./assets/img/blobal/html-5.png" alt="HTML logo">
+                </div>
+            </div>
+            <div id="logo-css" class="div-flex__item-css">
+                <div class="circle">
+                    <img src="./assets/img/blobal/css-3.png" alt="CSS logo">
+                </div>
+            </div>
+            <div id="logo-js" class="div-flex__item-js">
+                <div class="circle">
+                    <img src="./assets/img/blobal/js.png" alt="JS logo">
+                </div>
+            </div>
         </section>
-<<<<<<< HEAD
+
         <input class="div-flex__input" type="text">
+
         <section class="div-flex__section-filter">
             <button class="item-filter" type="button"></button>
             <button class="item-filter" type="button"></button>
             <button class="item-filter" type="button"></button>
         </section>
+
         <section class="div-flex__section-box">
             <div class="section-box__item"></div>
             <div class="section-box__item"></div>
@@ -126,34 +260,396 @@
             <div class="section-box__item"></div>
             <div class="section-box__item"></div>
         </section>
+
         <button type="button"></button>
+
         <section class="div-flex__section-comeco">
             <h1>Começo</h1>
-            <p>Esse mini curso ira apenas tratar de um elemnto intermediario que e o filtro de elementos envolventdo HTML, JS e CSS caso queira os fundamentos dessas 3 linguagenens para se aprofundar nos conhecimentos recomendamos e muinto 2 cursos do Curso em video abaixo</p>
+            <p>Esse mini curso ira apenas tratar de um elemnto intermediario que e o filtro de elementos envolventdo
+                HTML, JS e CSS caso queira os fundamentos dessas 3 linguagenens para se aprofundar nos conhecimentos
+                recomendamos e muinto 2 cursos do Curso em video abaixo</p>
             <div>
-                <iframe width="250" height="200" src="https://www.youtube.com/embed/1-w1RfGIov4?si=bqJdSrhcM-RRLHH2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="250" height="200" src="https://www.youtube.com/embed/Ejkb_YpuHWs?si=k-MQkA0DWuz7LbFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="250" height="200" src="https://www.youtube.com/embed/1-w1RfGIov4?si=bqJdSrhcM-RRLHH2"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="250" height="200" src="https://www.youtube.com/embed/Ejkb_YpuHWs?si=k-MQkA0DWuz7LbFs"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
-        <section class="div-flex__section-comeco">
-            
+
+        <!-- HTML Section -->
+        <!-- HTML Section -->
+        <!-- HTML Section -->
+        <!-- HTML Section -->
+        <!-- HTML Section -->
+        <!-- HTML Section -->
+        <!-- HTML Section -->
+        <!-- HTML Section -->
+        <section class="div-flex__section-main">
+            <!-- Título -->
+            <!-- Título HTML melhorado -->
+            <div id="titulo-html" class="div-flex__section__title html" style="
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FC490B, #FF6B3A);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  text-align: center;
+">
+                Primeira Parte: HTML
+            </div>
+
+
+            <!-- Código HTML -->
+            <div class="div-flex__section__code html" style="
+    background-color: #1e1e2e;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: auto;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    margin-top: 12px;
+  ">
+                <pre>
+&lt;div class="div-flex__section-box"&gt;
+  &lt;div class="section-box__item" style="background-color: red; color:white;"&gt;Red&lt;/div&gt;
+  &lt;div class="section-box__item" style="background-color: blue; color:white;"&gt;Blue&lt;/div&gt;
+  &lt;div class="section-box__item" style="background-color: green; color:white;"&gt;Green&lt;/div&gt;
+  &lt;div class="section-box__item" style="background-color: #FFD700; color:black; text-shadow:1px 1px 2px rgba(0,0,0,0.6);"&gt;Yellow&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+
+            <!-- Explicação HTML -->
+            <div id="explicacao-html" class="div-flex__section__explicacao html" style="
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    line-height: 1.7;
+    font-size: 16px;
+    margin-top: 15px;
+  ">
+                <h2 style="margin-top:0; color:#FC490B; font-family: 'Segoe UI', sans-serif;">Como funciona:</h2>
+                <ul style="padding-left:20px; margin-top:10px;">
+                    <li><strong>div-flex__section-box:</strong> contêiner que organiza as caixas em uma <strong>grade
+                            responsiva</strong>.</li>
+                    <li><strong>section-box__item:</strong> cada caixa representa uma cor e exibe o <em>nome da cor</em>
+                        usado para o filtro via JavaScript.</li>
+                    <li>Use cores comuns e reconhecíveis:
+                        <span style="color:red; font-weight:bold;">Red</span>,
+                        <span style="color:blue; font-weight:bold;">Blue</span>,
+                        <span style="color:green; font-weight:bold;">Green</span>,
+                        <span
+                            style="color:#FFD700; font-weight:bold; text-shadow:1px 1px 2px rgba(0,0,0,0.6);">Yellow</span>
+                    </li>
+                    <li>O amarelo agora tem contraste e sombra para ser visível em qualquer fundo.</li>
+                    <li>Essa separação de HTML, CSS e JS mantém o layout <strong>limpo e fácil de manipular</strong>.
+                    </li>
+                </ul>
+                <p style="font-style:italic; color:#555; margin-top:12px;">
+                    Dica: digite o nome da cor no input para filtrar as caixas correspondentes. Experimente "Red",
+                    "Blue", "Green" ou "Yellow".
+                </p>
+            </div>
         </section>
-=======
-        <!--<input type="text">
-        <button type="button"></button>
-        <button type="button"></button>
-        <button type="button"></button>
-        <section>
-            Adicionando as caixas
+
+
+
+
+
+
+
+        <!-- CSS Section -->
+        <section class="div-flex__section-main">
+            <!-- Título CSS melhorado -->
+            <div id="titulo-css" class="div-flex__section__title css" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #2196F3, #64B5F6);
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        text-align: center;
+    ">
+                Segunda Parte: CSS
+            </div>
+
+            <!-- Código CSS -->
+            <div class="div-flex__section__code css" style="
+        background-color: #1e1e2e;
+        color: #f8f8f2;
+        padding: 20px;
+        border-radius: 12px;
+        font-family: 'Courier New', monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-x: auto;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+        margin-top: 12px;
+    ">
+                <pre>
+.section-box__item {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.section-box__item.red { background-color: red; }
+.section-box__item.blue { background-color: blue; }
+.section-box__item.green { background-color: green; }
+.section-box__item.yellow { background-color: #FFD700; color: black; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); }
+        </pre>
+            </div>
+
+            <!-- Explicação CSS -->
+            <div class="div-flex__section__explicacao css" style="
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+        line-height: 1.7;
+        font-size: 16px;
+        margin-top: 15px;
+    ">
+                <h2 style="margin-top:0; color:#2196F3; font-family: 'Segoe UI', sans-serif;">Como funciona:</h2>
+                <ul style="padding-left:20px; margin-top:10px;">
+                    <li><strong>section-box__item:</strong> cada caixa recebe uma classe de cor para estilização via
+                        CSS.</li>
+                    <li>As cores usadas são comuns e reconhecíveis:
+                        <span style="color:red; font-weight:bold;">Red</span>,
+                        <span style="color:blue; font-weight:bold;">Blue</span>,
+                        <span style="color:green; font-weight:bold;">Green</span>,
+                        <span
+                            style="color:#FFD700; font-weight:bold; text-shadow:1px 1px 2px rgba(0,0,0,0.6);">Yellow</span>
+                    </li>
+                    <li>O amarelo tem contraste e sombra para ser visível em qualquer fundo.</li>
+                    <li>Essa separação de classes permite filtrar, organizar e modificar as cores facilmente.</li>
+                </ul>
+                <p style="font-style:italic; color:#555; margin-top:12px;">
+                    Dica: altere o CSS para mudar cores, sombras ou tamanho das caixas e veja o resultado imediatamente.
+                </p>
+            </div>
         </section>
-        <button type="button"></button>
-        <section>
-            <h1></h1>
-            <p></p>
-            <iframe src="" frameborder="0"></iframe>
-            <iframe src="" frameborder="0"></iframe>
-        </section>-->
->>>>>>> cdc9908d9fac41d30dc4016f7dc36ce1cb7642aa
+
+
+        <!-- JS Section -->
+        <section class="div-flex__section-main">
+            <!-- Título JS melhorado -->
+            <div id="titulo-js" class="div-flex__section__title js" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #FFDF00, #FFD633);
+        color: black;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        text-align: center;
+    ">
+                Terceira Parte: JavaScript
+            </div>
+
+            <!-- Código JS -->
+            <div class="div-flex__section__code js" style="
+        background-color: #1e1e2e;
+        color: #f8f8f2;
+        padding: 20px;
+        border-radius: 12px;
+        font-family: 'Courier New', monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-x: auto;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+        margin-top: 12px;
+    ">
+                <pre>
+// Seleciona o input e as caixas
+const input = document.querySelector('.div-flex__input');
+const caixas = document.querySelectorAll('.section-box__item');
+
+// Filtro em tempo real
+input.addEventListener('input', function() {
+  const valor = this.value.toLowerCase();
+  caixas.forEach(caixa => {
+    if(caixa.textContent.toLowerCase().includes(valor)) {
+      caixa.style.display = 'flex';
+    } else {
+      caixa.style.display = 'none';
+    }
+  });
+});
+        </pre>
+            </div>
+
+            <!-- Explicação JS -->
+            <div id="explicacao-js" class="div-flex__section__explicacao js" style="
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+        line-height: 1.7;
+        font-size: 16px;
+        margin-top: 15px;
+    ">
+                <h2 style="margin-top:0; color:#FFDF00; font-family: 'Segoe UI', sans-serif;">Como funciona:</h2>
+                <ul style="padding-left:20px; margin-top:10px;">
+                    <li><strong>input:</strong> o campo onde o usuário digita o nome da cor.</li>
+                    <li><strong>caixas:</strong> cada <em>section-box__item</em> representa uma cor que será filtrada.
+                    </li>
+                    <li>O <strong>evento input</strong> verifica em tempo real se o texto digitado corresponde ao nome
+                        de alguma cor.</li>
+                    <li>Se a caixa corresponde ao filtro, ela permanece visível; caso contrário, é escondida.</li>
+                    <li>Isso permite que o usuário teste interativamente o filtro digitando <em>"Red"</em>,
+                        <em>"Blue"</em>, <em>"Green"</em> ou <em>"Yellow"</em>.</li>
+                </ul>
+                <p style="font-style:italic; color:#555; margin-top:12px;">
+                    Dica: você pode expandir o filtro adicionando mais cores ou categorias e ver como o JavaScript
+                    mantém o layout dinâmico.
+                </p>
+            </div>
+        </section>
+
+
+        <footer>
+            <h1>Parabéns, você sabe agora como fazer um filtro por input</h1>
+        </footer>
     </div>
 </body>
+<script>
+    // Lista de cores conhecidas
+    let caixas = [
+        { cor: "red" },
+        { cor: "blue" },
+        { cor: "green" },
+        { cor: "orange" },
+        { cor: "yellow" },
+        { cor: "purple" },
+        { cor: "pink" },
+        { cor: "brown" },
+        { cor: "cyan" },
+        { cor: "magenta" },
+        { cor: "lime" },
+        { cor: "teal" },
+        { cor: "indigo" },
+        { cor: "violet" },
+        { cor: "gold" },
+        { cor: "silver" },
+        { cor: "coral" },
+        { cor: "salmon" },
+        { cor: "khaki" },
+        { cor: "navy" }
+    ];
+
+    let caixasFiltradas = [...caixas];
+    const container = document.querySelector(".div-flex__section-box");
+    const input = document.querySelector(".div-flex__input");
+    const botoes = document.querySelectorAll(".item-filter");
+
+    // Renderizar caixas coloridas com nome
+    function exibirCaixas(lista) {
+        container.innerHTML = "";
+        lista.forEach(item => {
+            const div = document.createElement("div");
+            div.className = "section-box__item";
+            div.style.backgroundColor = item.cor;
+
+            // criar camada de texto com fundo
+            const span = document.createElement("span");
+            span.textContent = item.cor;
+            span.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // fundo semi-transparente
+            span.style.padding = "2px 6px";
+            span.style.borderRadius = "4px";
+            span.style.color = "white";
+            span.style.fontSize = "14px";
+
+            div.innerHTML = "";
+            div.appendChild(span);
+
+            container.appendChild(div);
+        });
+    }
+
+    exibirCaixas(caixasFiltradas);
+
+    // Filtrar pelo nome da cor
+    input.addEventListener("input", function () {
+        const texto = this.value.toLowerCase();
+        caixasFiltradas = caixas.filter(caixa =>
+            caixa.cor.toLowerCase().includes(texto)
+        );
+        exibirCaixas(caixasFiltradas);
+    });
+
+    // Botões de ordenação
+    botoes[0].textContent = "🎨 Aleatório";
+    botoes[0].addEventListener("click", () => {
+        caixasFiltradas.sort(() => Math.random() - 0.5);
+        exibirCaixas(caixasFiltradas);
+    });
+
+    botoes[1].textContent = "⬆️ A-Z";
+    botoes[1].addEventListener("click", () => {
+        caixasFiltradas.sort((a, b) => a.cor.localeCompare(b.cor));
+        exibirCaixas(caixasFiltradas);
+    });
+
+    botoes[2].textContent = "⬇️ Z-A";
+    botoes[2].addEventListener("click", () => {
+        caixasFiltradas.sort((a, b) => b.cor.localeCompare(a.cor));
+        exibirCaixas(caixasFiltradas);
+    });
+    // Seleciona logos
+    const logoHTML = document.getElementById('logo-html');
+    const logoCSS = document.getElementById('logo-css');
+    const logoJS = document.getElementById('logo-js');
+
+    // Seleciona títulos
+    const tituloHTML = document.getElementById('titulo-html');
+    const tituloCSS = document.getElementById('titulo-css');
+    const tituloJS = document.getElementById('titulo-js');
+
+    // Função de scroll suave
+    function scrollPara(titulo) {
+        titulo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Eventos de clique
+    logoHTML.addEventListener('click', () => scrollPara(tituloHTML));
+    logoCSS.addEventListener('click', () => scrollPara(tituloCSS));
+    logoJS.addEventListener('click', () => scrollPara(tituloJS));
+</script>
+
+
+
+
 </html>
